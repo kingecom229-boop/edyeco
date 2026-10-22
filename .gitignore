@@ -1,0 +1,36 @@
+# Dépendances
+node_modules/
+.pnp/
+.pnp.js
+
+# Builds
+dist/
+client/dist/
+build/
+
+# Environnement & secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Bases de données locales / données PGlite
+server/data/
+*.sqlite
+*.db
+
+# Médias téléversés en local (les fichiers de démonstration sont versionnés via client/public)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Outils et artefacts temporaires
+.tmp-*/
+.tmp-smoke/
+coverage/
+*.log
+npm-debug.log*
+.DS_Store
+.idea/
+.vscode/
+playwright-report/
+test-results/
