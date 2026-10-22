@@ -1,0 +1,13 @@
+{
+  "name": "EdyEco — Bois de chauffage",
+  "short_name": "EdyEco",
+  "description": "Bois de chauffage sec, granulés et bûches compressées livrés à domicile.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF6EC",
+  "theme_color": "#143f27",
+  "icons": [
+    { "src": "/brand/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/brand/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
