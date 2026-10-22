@@ -33,12 +33,12 @@ export const DELIVERY_OPTIONS = {
   retrait: {
     id: 'retrait',
     label: 'Retrait entrepôt',
-    description: 'Nantes-est · sur rendez-vous, chargement par nos équipes',
+    description: 'Soulac-sur-Mer · sur rendez-vous, chargement par nos équipes',
     eta: 'sous 48 h',
   },
 };
 
-const LOCAL_PREFIXES = new Set(['44', '49', '85', '79', '86', '37', '72', '53', '35', '56', '29', '22', '17', '33']);
+const LOCAL_PREFIXES = new Set(['33', '17', '16', '24', '47', '40', '64', '32']);
 
 /** Simple, honest delivery estimator based on the warehouse region. */
 export function deliveryEstimate(postalCode) {

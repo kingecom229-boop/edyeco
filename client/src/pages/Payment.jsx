@@ -249,7 +249,7 @@ export default function Payment() {
             <div className="rounded-3xl border border-forest-900/8 bg-forest-50 p-5">
               <p className="flex items-center gap-2 text-sm font-semibold text-forest-900"><ShieldCheck className="h-4 w-4" /> Livraison</p>
               <p className="mt-1 text-xs text-ink/60">
-                {order.deliveryMethod === 'retrait' ? 'Retrait à l’entrepôt de Nantes-est, sur rendez-vous.' :
+                {order.deliveryMethod === 'retrait' ? 'Retrait à l’entrepôt de Soulac-sur-Mer, sur rendez-vous.' :
                  order.deliveryMethod === 'confort' ? 'Livraison confort : le transporteur vous contacte sous 10 jours.' :
                  'Livraison classique : créneau communiqué sous 5 jours ouvrés.'}
               </p>

@@ -232,7 +232,7 @@ export default function Product() {
                 <Package className="mt-0.5 h-4 w-4 shrink-0 text-ember-600" />
                 <div className="text-xs">
                   <p className="font-semibold text-forest-950">Retrait entrepôt gratuit</p>
-                  <p className="text-ink/55">Nantes-est · sur rendez-vous sous 48 h</p>
+                  <p className="text-ink/55">Soulac-sur-Mer · sur rendez-vous sous 48 h</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">

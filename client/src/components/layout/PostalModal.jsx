@@ -5,7 +5,7 @@ import { useStore } from '../../context/StoreContext';
 import { deliveryEstimate } from '../../lib/format';
 import { useToast } from '../../context/ToastContext';
 
-const WAREHOUSE = { lat: 47.2184, lng: -1.5536, city: 'Nantes-est' };
+const WAREHOUSE = { lat: 45.5126, lng: -1.0617, city: 'Soulac-sur-Mer' };
 
 function distanceKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
@@ -62,7 +62,7 @@ export default function PostalModal({ open, onClose }) {
       }
     >
       <p className="text-sm text-ink/70">
-        Indiquez votre code postal pour connaître les délais de livraison depuis notre entrepôt de <strong>{store.warehouse || 'Nantes-est'}</strong>.
+        Indiquez votre code postal pour connaître les délais de livraison depuis notre entrepôt de <strong>{store.warehouse || 'Soulac-sur-Mer (33)'}</strong>.
       </p>
       <div className="mt-4 flex gap-2">
         <input
@@ -72,7 +72,7 @@ export default function PostalModal({ open, onClose }) {
           maxLength={5}
           value={value}
           onChange={(e) => setValue(e.target.value.replace(/\D/g, '').slice(0, 5))}
-          placeholder="75001"
+          placeholder="33780"
           aria-label="Code postal"
           className="field flex-1"
         />

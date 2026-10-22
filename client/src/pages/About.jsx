@@ -40,7 +40,7 @@ export default function About() {
             <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-ink/65">
               <p>
                 EdyEco est une entreprise familiale spécialisée dans le bois de chauffage. Nous avons grandi
-                au rythme des saisons, entre les forêts du Sud-Ouest et notre entrepôt de Nantes-est, à force
+                au rythme des saisons, entre les forêts du Sud-Ouest et notre entrepôt de Soulac-sur-Mer, à force
                 de livrer des palettes et d’écouter les mêmes questions : « est-il bien sec ? », « combien de
                 stères pour l’hiver ? », « quelle longueur pour mon poêle ? ».
               </p>
@@ -108,7 +108,7 @@ export default function About() {
                 ['Forêts du Sud-Ouest', 'Chêne, hêtre et charme issus de parcelles gérées durablement.'],
                 ['Scieries partenaires', 'Séchage lent et calibrage rigoureux, à moins de 300 km.'],
                 ['Transporteurs locaux', 'Des chauffeurs formés aux accès difficiles et au placement de palette.'],
-                ['Entrepôt de Nantes-est', 'Stockage ventilé, préparation des commandes et retrait sur place.'],
+                ['Entrepôt de Soulac-sur-Mer', 'Stockage ventilé, préparation des commandes et retrait sur place.'],
               ].map(([title, text]) => (
                 <div key={title} className="rounded-2xl bg-forest-50 p-4">
                   <p className="flex items-center gap-2 text-sm font-semibold text-forest-950"><Award className="h-4 w-4 text-ember-600" /> {title}</p>

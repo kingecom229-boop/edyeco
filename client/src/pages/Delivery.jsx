@@ -43,7 +43,7 @@ export default function Delivery() {
     <>
       <Seo
         title="Livraison de bois de chauffage : classique ou confort | EdyEco"
-        description="Livraison classique par camion porteur ou livraison confort avec chariot élévateur. Délais, conditions d’accès et retrait entrepôt à Nantes-est."
+        description="Livraison classique par camion porteur ou livraison confort avec chariot élévateur. Délais, conditions d’accès et retrait entrepôt à Soulac-sur-Mer."
       />
       <PageHero
         title="Livraison de bois de chauffage à domicile"
@@ -120,7 +120,7 @@ export default function Delivery() {
             <Package className="h-8 w-8 text-ember-300" />
             <h2 className="mt-4 font-display text-2xl font-semibold">Retrait entrepôt gratuit</h2>
             <p className="mt-2 text-sm leading-relaxed text-white/65">
-              Retirez votre commande à {store.warehouse || 'Nantes-est'}, sur rendez-vous. Nos équipes chargent votre palette avec un chariot élévateur, en moins de 20 minutes.
+              Retirez votre commande à {store.warehouse || 'Soulac-sur-Mer (33)'}, sur rendez-vous. Nos équipes chargent votre palette avec un chariot élévateur, en moins de 20 minutes.
             </p>
             <ul className="mt-4 space-y-2 text-sm text-white/70">
               <li>• Gratuit, sans frais de livraison</li>

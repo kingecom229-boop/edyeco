@@ -40,7 +40,7 @@ export default function Cart() {
   const options = [
     { id: 'classique', label: deliveryOptions.classique?.label || 'Livraison classique', eta: deliveryOptions.classique?.eta || '5 à 8 jours ouvrés', icon: Truck },
     { id: 'confort', label: deliveryOptions.confort?.label || 'Livraison confort', eta: deliveryOptions.confort?.eta || 'environ 2 semaines', icon: Warehouse },
-    { id: 'retrait', label: 'Retrait entrepôt', eta: 'sur rendez-vous · Nantes-est', icon: Store },
+    { id: 'retrait', label: 'Retrait entrepôt', eta: 'sur rendez-vous · Soulac-sur-Mer', icon: Store },
   ];
 
   return (

@@ -10,7 +10,7 @@ const FALLBACK = {
     email: 'contact@edyeco.fr',
     phone: '05 56 09 90 99',
     address: '68 route de Bordeaux, 33780 Soulac-sur-Mer',
-    warehouse: 'Entrepôt Nantes-Est — 44',
+    warehouse: 'Entrepôt de Soulac-sur-Mer — 33',
     hours: 'Du lundi au vendredi, 8h30 – 18h00',
     siret: 'SIRET 000 000 000 00000',
     vat: 'TVA FR00000000000',

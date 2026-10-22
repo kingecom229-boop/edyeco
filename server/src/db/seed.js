@@ -270,7 +270,7 @@ const products = [
     short:
       "Un stère de bûches de 33 cm livré en vrac, pour ceux qui souhaitent stocker et empiler eux-mêmes leur bois.",
     description:
-      "Le vrac est la solution la plus économique : un stère (équivalent à 0,7 m³ apparent) de bûches de 33 cm en feuillus secs. Livraison par camion, dépose au pied de votre accès.\n\nDisponible sur notre entrepôt de Nantes-est et en livraison locale.",
+      "Le vrac est la solution la plus économique : un stère (équivalent à 0,7 m³ apparent) de bûches de 33 cm en feuillus secs. Livraison par camion, dépose au pied de votre accès.\n\nDisponible depuis notre entrepôt de Soulac-sur-Mer et en livraison locale.",
     price_cents: 21900,
     stock: 60,
     unit: 'stère',
@@ -503,7 +503,7 @@ Sous 10 jours, le transporteur valide l'accès et fixe la date de livraison. Deu
 
 ## Retrait à l'entrepôt
 
-Vous pouvez également retirer votre commande directement à notre entrepôt de Nantes-est, sur rendez-vous, pour économiser les frais de livraison.`,
+Vous pouvez également retirer votre commande directement à notre entrepôt de Soulac-sur-Mer, sur rendez-vous, pour économiser les frais de livraison.`,
   },
 ];
 
@@ -540,7 +540,7 @@ const faqs = [
   },
   {
     q: 'Proposez-vous le retrait à l\'entrepôt ?',
-    a: "Oui, le retrait est gratuit sur rendez-vous à notre entrepôt de Nantes-est (44). Sélectionnez l'option « Retrait entrepôt » lors de la commande, nous vous confirmons le créneau par téléphone.",
+    a: "Oui, le retrait est gratuit sur rendez-vous à notre entrepôt de Soulac-sur-Mer (33). Sélectionnez l'option « Retrait entrepôt » lors de la commande, nous vous confirmons le créneau par téléphone.",
     category: 'Livraison',
   },
   {
@@ -567,7 +567,7 @@ const settings = [
     email: 'contact@edyeco.fr',
     phone: '05 56 09 90 99',
     address: '68 route de Bordeaux, 33780 Soulac-sur-Mer',
-    warehouse: 'Entrepôt Nantes-Est — 44',
+    warehouse: 'Entrepôt de Soulac-sur-Mer — 33',
     hours: 'Du lundi au vendredi, 8h30 – 18h00',
     siret: 'SIRET 000 000 000 00000',
     vat: 'TVA FR00000000000',
@@ -753,6 +753,14 @@ export async function seed({ reset = false, silent = false } = {}) {
       }
 
       // Historic orders over the last 90 days, deterministic-ish
+      const demoAddresses = [
+        { zip: '33780', city: 'Soulac-sur-Mer' },
+        { zip: '33120', city: 'Arcachon' },
+        { zip: '33000', city: 'Bordeaux' },
+        { zip: '17200', city: 'Royan' },
+        { zip: '33340', city: 'Lesparre-Médoc' },
+        { zip: '17137', city: 'Nieul-sur-Mer' },
+      ];
       const statuses = ['paid', 'shipped', 'delivered', 'delivered', 'delivered', 'pending', 'cancelled'];
       const productList = Object.entries(productIds);
       let seedN = 7;
@@ -790,7 +798,7 @@ export async function seed({ reset = false, silent = false } = {}) {
            RETURNING id`,
           [
             `EDY-${String(100000 + i)}`, cust.id, cust.email, cust.name, cust.phone,
-            JSON.stringify({ line1: `${1 + i} rue des Chênes`, postal_code: '44300', city: 'Nantes', country: 'France' }),
+            JSON.stringify({ line1: `${1 + i} rue des Chênes`, postal_code: demoAddresses[i % demoAddresses.length].zip, city: demoAddresses[i % demoAddresses.length].city, country: 'France' }),
             deliveryFee, subtotal, total, status, paid ? new Date() : null, String(dayAgo),
           ]
         );

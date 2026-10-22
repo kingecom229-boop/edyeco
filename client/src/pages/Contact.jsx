@@ -114,14 +114,14 @@ export default function Contact() {
                 <li className="flex gap-3"><Warehouse className="mt-0.5 h-4 w-4 shrink-0 text-ember-400" /><span><span className="block text-xs text-white/45">Entrepôt & retrait</span><span className="font-medium text-white/85">{store.warehouse}</span></span></li>
                 <li className="flex gap-3"><Clock className="mt-0.5 h-4 w-4 shrink-0 text-ember-400" /><span><span className="block text-xs text-white/45">Horaires</span><span className="font-medium text-white/85">{store.hours}</span></span></li>
               </ul>
-              <a href="https://www.google.com/maps/search/?api=1&query=Nantes" target="_blank" rel="noopener noreferrer" className="btn-primary btn-sm mt-5">Itinéraire vers l’entrepôt</a>
+              <a href="https://www.google.com/maps/search/?api=1&query=68+route+de+Bordeaux+33780+Soulac-sur-Mer" target="_blank" rel="noopener noreferrer" className="btn-primary btn-sm mt-5">Itinéraire vers l’entrepôt</a>
             </div>
 
             <div className="relative overflow-hidden rounded-3xl border border-forest-900/8 bg-sand p-6">
               <div className="absolute inset-0 opacity-[0.35]" aria-hidden="true" style={{ backgroundImage: 'linear-gradient(#143f27 1px, transparent 1px), linear-gradient(90deg, #143f27 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
               <div className="relative">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ember-500 text-white shadow-ember"><MapPin className="h-5 w-5" /></span>
-                <p className="mt-3 font-display text-base font-semibold">Entrepôt de Nantes-est</p>
+                <p className="mt-3 font-display text-base font-semibold">Entrepôt de Soulac-sur-Mer</p>
                 <p className="mt-1 text-xs text-ink/55">Retrait sur rendez-vous, du lundi au vendredi. Prévoyez un véhicule adapté ou demandez le chargement assisté.</p>
                 <Link to="/livraison#retrait" className="mt-3 inline-flex text-xs font-semibold text-forest-800 underline underline-offset-4">En savoir plus sur le retrait</Link>
               </div>

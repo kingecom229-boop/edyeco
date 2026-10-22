@@ -171,7 +171,7 @@ export default function Checkout() {
   const deliveryChoices = [
     { id: 'classique', label: deliveryOptions.classique?.label || 'Livraison classique', eta: deliveryOptions.classique?.eta || '5 à 8 jours ouvrés', icon: Truck, description: 'Camion 19 t · dépôt au pied du camion' },
     { id: 'confort', label: deliveryOptions.confort?.label || 'Livraison confort', eta: deliveryOptions.confort?.eta || 'environ 2 semaines', icon: Warehouse, description: 'Chariot élévateur · palette posée dans votre propriété' },
-    { id: 'retrait', label: 'Retrait entrepôt', eta: 'sur rendez-vous', icon: Store, description: 'Nantes-est · chargement par nos équipes' },
+    { id: 'retrait', label: 'Retrait entrepôt', eta: 'sur rendez-vous', icon: Store, description: 'Soulac-sur-Mer · chargement par nos équipes' },
   ];
 
   return (
@@ -207,7 +207,7 @@ export default function Checkout() {
                   <FieldInput label="Complément d’adresse (optionnel)" value={form.line2} onChange={(v) => update('line2', v)} autoComplete="address-line2" placeholder="Bâtiment, hameau, instruction d’accès…" />
                 </div>
                 <FieldInput label="Code postal" required value={form.postalCode} onChange={(v) => update('postalCode', v.replace(/\D/g, '').slice(0, 5))} error={errors.postalCode} autoComplete="postal-code" inputMode="numeric" placeholder="44300" />
-                <FieldInput label="Ville" required value={form.city} onChange={(v) => update('city', v)} error={errors.city} autoComplete="address-level2" placeholder="Nantes" />
+                <FieldInput label="Ville" required value={form.city} onChange={(v) => update('city', v)} error={errors.city} autoComplete="address-level2" placeholder="Soulac-sur-Mer" />
               </div>
               {estimate && (
                 <p className="mt-3 rounded-xl bg-forest-50 px-3 py-2 text-[11px] text-forest-800">

@@ -212,6 +212,9 @@ export default function Header() {
 
   const announcement = settings.announcement;
   const reviews = settings.features || {};
+  const warehouseLabel = String(store.warehouse || 'Entrepôt de Soulac-sur-Mer — 33')
+    .replace(/^Entrepôt (de )?/i, '')
+    .replace(/\s*—\s*/, ' · ');
 
   return (
     <>
@@ -229,7 +232,7 @@ export default function Header() {
           <button type="button" onClick={() => setPostalOpen(true)} className="flex min-w-0 items-center gap-1.5 hover:text-white">
             <MapPin className="h-3.5 w-3.5 text-ember-400" aria-hidden="true" />
             <span className="truncate">
-              Mon entrepôt : <strong className="font-semibold text-white">{postalCode ? `Zone ${postalCode}` : '44 Nantes-Est'}</strong>
+              Mon entrepôt : <strong className="font-semibold text-white">{postalCode ? `Zone ${postalCode}` : warehouseLabel}</strong>
               {!postalCode && <span className="hidden text-white/55 sm:inline"> · Choisir mon code postal</span>}
             </span>
           </button>

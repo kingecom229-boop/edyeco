@@ -72,7 +72,7 @@ const STATIC_META = {
   '/livraison': {
     title: 'Livraison de bois de chauffage : classique ou confort | EdyEco',
     description:
-      'Livraison classique par camion porteur ou livraison confort avec chariot élévateur. Délais, conditions d’accès et retrait entrepôt à Nantes-est.',
+      'Livraison classique par camion porteur ou livraison confort avec chariot élévateur. Délais, conditions d’accès et retrait entrepôt à Soulac-sur-Mer.',
   },
   '/faq': {
     title: 'FAQ — Toutes vos questions sur le bois de chauffage | EdyEco',
