@@ -146,7 +146,7 @@ export function createApp() {
     app.get('*', asyncHandler(async (req, res, next) => {
       if (req.path.startsWith('/api/') || req.path.startsWith('/uploads/')) return next();
       const accept = req.get('accept') || '';
-      if (!accept.includes('text/html')) return next();
+      if (!accept.includes('text/html') && !accept.includes('*/*')) return next();
 
       const template = await loadIndexHtml(clientDist);
       let meta;
@@ -157,7 +157,8 @@ export function createApp() {
         meta = { title: 'EdyEco', description: '', canonical: `${config.siteUrl}${req.path}`, robots: 'index, follow', ogImage: `${config.siteUrl}/brand/favicon-512.png`, ogType: 'website', jsonLd: [], noscript: '' };
       }
       const head = renderSeoHead(meta, res.locals.nonce);
-      res.setHeader('Cache-Control', 'public, max-age=60');
+      // Le HTML contient un nonce CSP par requête : jamais de cache partagé.
+      res.setHeader('Cache-Control', 'private, max-age=0, must-revalidate');
       res.type('html').send(injectHtml(template, { head, noscript: meta.noscript, nonce: res.locals.nonce }));
     }));
   } else {
